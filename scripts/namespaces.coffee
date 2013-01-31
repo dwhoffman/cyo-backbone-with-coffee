@@ -1,3 +1,4 @@
-window.App = 
-
-    Models:{}
+window.App = {
+	Models: {}    
+	Views: {}
+}

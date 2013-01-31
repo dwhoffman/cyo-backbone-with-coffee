@@ -1,7 +1,8 @@
 ﻿(function() {
 
   window.App = {
-    Models: {}
+    Models: {},
+    Views: {}
   };
 
 }).call(this);

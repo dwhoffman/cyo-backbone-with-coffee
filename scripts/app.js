@@ -1,7 +1,7 @@
 ﻿(function() {
 
   $(function() {
-    var loginView, newQuestionView, questions;
+    var loginView, newQuestionView, questions, questionsView;
     App.currentUser = new App.Models.User();
     questions = new App.Collections.Questions();
     loginView = new App.Views.Login({
@@ -10,6 +10,10 @@
     });
     newQuestionView = new App.Views.NewQuestion({
       el: $('#newQuestionView'),
+      model: questions
+    });
+    questionsView = new App.Views.Questions({
+      el: $('#questions'),
       model: questions
     });
     return this;

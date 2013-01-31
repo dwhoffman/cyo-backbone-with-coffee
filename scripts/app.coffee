@@ -3,3 +3,6 @@ $ ->
 	loginView = new App.Views.Login
 		el: $('#loginView')
 		model: App.currentUser
+	newQuestionView = new App.Views.NewQuestion
+		el: $('#newQuestionView')
+	@

@@ -12,6 +12,10 @@
       return NewQuestion.__super__.constructor.apply(this, arguments);
     }
 
+    NewQuestion.prototype.events = {
+      "click #addItem": "addItem"
+    };
+
     NewQuestion.prototype.initialize = function(options) {
       App.currentUser.on("change", this.render);
       return this.render();
@@ -21,6 +25,16 @@
       $("#asker").text(App.currentUser.get("userName"));
       this.$el.toggleClass("hidden", !App.currentUser.isLoggedIn());
       return this;
+    };
+
+    NewQuestion.prototype.addItem = function() {
+      var question;
+      question = {
+        text: this.$("#newQuestion").val(),
+        userName: App.currentUser.get("userName")
+      };
+      this.model.add(new App.Models.Question(question));
+      return this.$("#newQuestion").val('');
     };
 
     return NewQuestion;

@@ -12,6 +12,8 @@
 
     Questions.prototype.model = App.Models.Question;
 
+    Questions.prototype.localStorage = new Backbone.LocalStorage("cyOverflow:questions");
+
     return Questions;
 
   })(Backbone.Collection);

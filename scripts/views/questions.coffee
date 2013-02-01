@@ -1,9 +1,12 @@
 ﻿class App.Views.Questions extends Backbone.View
 
 	initialize: ->
+		@model.on "reset", @render
 		@model.on "add", @renderItem
 
 	render: =>
+		@$el.html ""
+		@model.each @renderItem
 		@
 
 	renderItem: (item) =>

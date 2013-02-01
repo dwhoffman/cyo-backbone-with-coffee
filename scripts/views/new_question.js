@@ -33,7 +33,7 @@
         text: this.$("#newQuestion").val(),
         userName: App.currentUser.get("userName")
       };
-      this.model.add(new App.Models.Question(question));
+      this.model.create(question);
       return this.$("#newQuestion").val('');
     };
 

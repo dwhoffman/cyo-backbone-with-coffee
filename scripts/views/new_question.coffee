@@ -17,5 +17,5 @@
 			text: @$("#newQuestion").val()
 			userName: App.currentUser.get("userName")
 
-		@model.add new App.Models.Question(question)
+		@model.create question
 		@$("#newQuestion").val ''

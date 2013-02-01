@@ -16,6 +16,7 @@
       el: $('#questions'),
       model: questions
     });
+    questions.fetch();
     return this;
   });
 

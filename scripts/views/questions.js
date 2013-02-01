@@ -15,10 +15,13 @@
     }
 
     Questions.prototype.initialize = function() {
+      this.model.on("reset", this.render);
       return this.model.on("add", this.renderItem);
     };
 
     Questions.prototype.render = function() {
+      this.$el.html("");
+      this.model.each(this.renderItem);
       return this;
     };
 

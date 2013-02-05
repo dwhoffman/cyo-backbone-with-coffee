@@ -1,5 +1,4 @@
-window.App = {
-	Models: {}    
+window.App =
+	Models: {}
 	Collections: {}
 	Views: {}
-}

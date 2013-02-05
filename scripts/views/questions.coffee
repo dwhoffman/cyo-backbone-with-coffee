@@ -1,4 +1,4 @@
-﻿class App.Views.Questions extends Backbone.View
+class App.Views.Questions extends Backbone.View
 
 	initialize: ->
 		@model.on "reset", @render

@@ -1,4 +1,4 @@
-﻿class App.Models.User extends Backbone.Model
+class App.Models.User extends Backbone.Model
 
 	logIn: (userName) ->
 		return unless userName

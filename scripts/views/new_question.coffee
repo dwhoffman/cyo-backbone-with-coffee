@@ -1,6 +1,6 @@
-﻿class App.Views.NewQuestion extends Backbone.View
-	
-	events:
+class App.Views.NewQuestion extends Backbone.View
+
+	events: 
 		"click #addItem": "addItem"
 
 	initialize: (options) ->
@@ -13,7 +13,7 @@
 		@
 
 	addItem: ->
-		question = 
+		question =
 			text: @$("#newQuestion").val()
 			userName: App.currentUser.get("userName")
 

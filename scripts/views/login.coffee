@@ -1,6 +1,5 @@
-﻿class App.Views.Login extends Backbone.View
-
-	events:
+class App.Views.Login extends Backbone.View
+	events: 
 		"click #logIn": "login"
 
 	initialize: ->

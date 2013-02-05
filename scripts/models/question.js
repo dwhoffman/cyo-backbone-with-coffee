@@ -53,6 +53,20 @@
       return this.get('votes').reduce(reducer, 0);
     };
 
+    Question.prototype.didUserVote = function(userName, voteValue) {
+      var vote;
+      vote = this.getExistingVote(userName);
+      return !!(vote && vote.value === voteValue);
+    };
+
+    Question.prototype.didUserVoteUp = function(userName) {
+      return this.didUserVote(userName, 1);
+    };
+
+    Question.prototype.didUserVoteDown = function(userName) {
+      return this.didUserVote(userName, -1);
+    };
+
     return Question;
 
   })(Backbone.Model);

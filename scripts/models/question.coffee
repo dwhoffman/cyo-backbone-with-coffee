@@ -26,3 +26,10 @@
 	voteTally: ->
 		reducer = (tally, vote) -> tally + vote.value
 		this.get('votes').reduce reducer, 0
+
+	didUserVote: (userName, voteValue) ->
+		vote = @getExistingVote userName
+		!!(vote && vote.value == voteValue)
+
+	didUserVoteUp: (userName) -> @didUserVote userName, 1
+	didUserVoteDown: (userName) -> @didUserVote userName, -1

@@ -1,4 +1,6 @@
 $ ->
+	Backbone.io.connect()
+
 	App.currentUser = new App.Models.User();
 	questions = new App.Collections.Questions();
 
